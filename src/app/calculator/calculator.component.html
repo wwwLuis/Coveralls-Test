@@ -1,0 +1,9 @@
+<div class="calculator">
+    <input type="text" class="display" [(ngModel)]="currentOperand" readonly>
+    <div class="buttons">
+        <button class="number" *ngFor="let num of ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.']" (click)="appendNumber(num)">{{num}}</button>
+        <button class="operator" *ngFor="let op of ['+', '-', '*', '/']" (click)="performOperation(op)">{{op}}</button>
+        <button class="equals" (click)="calculate()">=</button>
+        <button class="clear" (click)="clear()">C</button>
+    </div>
+</div>
